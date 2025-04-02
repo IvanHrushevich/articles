@@ -5,14 +5,12 @@ import { AppRoter } from './providers/router';
 import './styles/index.scss';
 
 export const App = () => {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
 
   return (
     <div className={classNames('app', {}, [theme])}>
       <Navbar />
       <AppRoter></AppRoter>
-      <button onClick={toggleTheme}>Toggle theme</button>
-      <br />
     </div>
   );
 };
