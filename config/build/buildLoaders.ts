@@ -22,6 +22,17 @@ const svgLoader = {
   use: ['@svgr/webpack'],
 };
 
+const babelLoader = {
+  test: /\.(js|jsx|tsx)$/,
+  exclude: /node_modules/,
+  use: {
+    loader: 'babel-loader',
+    options: {
+      presets: ['@babel/preset-env'],
+    },
+  },
+};
+
 export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
   const cssLoader = {
     test: /\.s[ac]ss$/i,
@@ -45,5 +56,5 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
     ],
   };
 
-  return [typescriptLoader, cssLoader, fileLoader, svgLoader];
+  return [babelLoader, typescriptLoader, cssLoader, fileLoader, svgLoader];
 }
