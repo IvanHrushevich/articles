@@ -7,17 +7,17 @@ import { AppRoter } from './providers/router';
 import './styles/index.scss';
 
 export const App = () => {
-  const { theme } = useTheme();
+    const { theme } = useTheme();
 
-  return (
-    <Suspense fallback="">
-      <div className={classNames('app', {}, [theme])}>
-        <Navbar />
-        <div className="content-page">
-          <Sidebar />
-          <AppRoter />
-        </div>
-      </div>
-    </Suspense>
-  );
+    return (
+        <Suspense fallback="">
+            <div className={classNames('app', {}, [theme])}>
+                <Navbar />
+                <div className="content-page">
+                    <Sidebar />
+                    <AppRoter />
+                </div>
+            </div>
+        </Suspense>
+    );
 };
