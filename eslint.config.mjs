@@ -3,6 +3,7 @@ import globals from 'globals';
 import js from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import pluginReact from 'eslint-plugin-react';
+import i18next from 'eslint-plugin-i18next';
 
 export default defineConfig([
     { files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'] },
@@ -28,4 +29,5 @@ export default defineConfig([
             'react/jsx-props-no-spreading': 'warn'
         },
     },
+    i18next.configs['flat/recommended'],
 ]);
