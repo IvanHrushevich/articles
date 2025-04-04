@@ -26,7 +26,8 @@ export default defineConfig([
             'indent': ['error', 4],
             'no-unused-vars': ['warn', { "argsIgnorePattern": "^_" }],
             '@typescript-eslint/no-unused-vars': ['warn', { "argsIgnorePattern": "^_" }],
-            'react/jsx-props-no-spreading': 'warn'
+            'react/jsx-props-no-spreading': 'warn',
+            'max-len': ['error', { "code": 100, ignoreComments: true }]
         },
     },
     i18next.configs['flat/recommended'],
