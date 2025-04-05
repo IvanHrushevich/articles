@@ -7,5 +7,10 @@ export function buildDevServer(options: BuildOptions): Configuration {
         open: true,
         historyApiFallback: true,
         hot: true,
+        client: {
+            overlay: {
+                runtimeErrors: false,
+            },
+        },
     };
 }
